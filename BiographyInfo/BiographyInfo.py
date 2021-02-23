@@ -1,7 +1,8 @@
 import re
+from typing import Pattern
 
 name =raw_input("Enter Your Name:")
-# dob =raw_input("Enter Your DOB:")
+dob =raw_input("Enter Your DOB(DD/MM/YYYY):")
 # address =raw_input("Enter Your Address:")
 # goals =raw_input("Enter Your Personal Goals:")
 
@@ -11,14 +12,21 @@ class Validator:
     def name_valid(self,user_input):
         pattern="^[a-zA-Z]([a-zA-Z]| )*$"
         if(re.findall(pattern,user_input)):
-            return True
+            return user_input
         else:
-            return False
+            return "Invalid Name"
 
+    def dob_valid(self, user_input):
+        pattern= "^([0-2][1-9]|[1-2]0|3[0-1]|[1-9])[\s\-\/]((1[0-2]|[1-9]|0?[1-9]))[\s\-\/]([1-2][0-9]{3})$"
+        if(re.findall(pattern,user_input)):
+            return user_input
+        else:
+            return "Invalid Date DD/MM//YYYY"
+        return user_input
 
 v=Validator()
 
 print("Name: " + str(v.name_valid(name)))
-# print("Date of birth: " + dob)
+print("Date of birth: " + str(v.dob_valid(dob)))
 # print("Address: " + address)
 # print("Personal Goal: " + goals)
