@@ -1,0 +1,18 @@
+{
+    "info": [
+      {
+        "id": 0,
+        "name": "Hans-Dieter Schmidt",
+        "phoneNumber": "+49xxxxxxxx",
+        "birthday": "1976/10/11",
+        "insuranceNumber": "abcd"
+      },
+      {
+        "id": 1,
+        "name": "Klaus Kaufmann",
+        "phoneNumber": "+491707785787",
+        "birthday": "1977/10/11",
+        "insuranceNumber": "abcd"
+      }
+    ]
+  }
